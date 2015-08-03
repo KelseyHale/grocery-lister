@@ -1,0 +1,4 @@
+<h1>Grocery List</h1>
+{{#each item in model}}
+ <h3>{{link-to item.name 'items.show' item}}</h3>
+{{/each}}
