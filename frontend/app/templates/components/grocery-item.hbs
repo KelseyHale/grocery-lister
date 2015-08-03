@@ -1,8 +1,0 @@
-<li>
-  {{#if isEditing}}
-    <input class="edit">
-  {{else}}
-    <input type="checkbox" class="toggle">
-    <label {{action "editItem" on="doubleClick"}}>{{link-to item.name 'items.show' item}}</label><button class="destroy"></button>
-  {{/if}}
-</li>
