@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col s8 offset-s2">
+    <ul class="collection with-header">
+      <li class="collection-header">
+        <div class="row clearfix">
+          <h4 class="col s5">Grocery List</h4>
+          <div class="col s6 offset-s6 add-item">
+            {{input type="text" id="new-item" placeholder="Add to list" value=newItem action="createItem"}}
+          </div>
+        </div>
+      </li>
+      {{#each item in model}}
+       <li class="collection-item row">
+         <div class="col s10">
+           {{link-to item.name 'items.show' item}}
+         </div>
+         <div class="col s2 offset-s10">
+           {{link-to "Edit" 'items.edit' item}}
+         </div>
+       </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{outlet}}
+</div>

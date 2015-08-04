@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col s8 offset-s2">
+    <header>
+      <h1>Editing {{model.name}}</h1>
+    </header>
+
+      <div class="edit-item">
+        <label>Edit Item</label>
+        {{input value=model.name}}
+        <button {{action "save"}}> Done </button>
+    </div>
+    {{link-to "Home" 'items'}}
+  </div>
+</div>
