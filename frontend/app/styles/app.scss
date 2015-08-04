@@ -1,2 +1,14 @@
 @import 'materialize';
 @import 'ember-cli-materialize';
+
+div.row.clearfix {
+  margin: 0;
+}
+
+div.col.s6.offset-s6.add-item{
+  margin: 0;
+}
+
+div.col.s2.offset-s10 {
+  margin: 0;
+}

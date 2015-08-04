@@ -6,9 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('items', function(){
-    // add this line
-    this.route('show', {path: ':id'});
+  this.route('items', function(){
+    this.route('show', { path: ':id' });
+    this.route('edit', { path: ':id/edit' });
   });
 });
 

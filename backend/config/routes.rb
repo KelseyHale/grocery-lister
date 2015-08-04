@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :items, only: [:index, :show, :create, :new]
+      resources :items, only: [:index, :show, :create, :new, :edit, :update]
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
