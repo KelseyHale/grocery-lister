@@ -12,8 +12,12 @@ export default Ember.Route.extend({
         var _this = this;
         var item = this.get('controller.model');
         item.save().then(function(model) {
-          _this.transitionTo('/items');
+          _this.transitionTo('items.index');
         });
+      },
+      willTransition: function(transition) {
+        var item = this.get('controller.model');
+        item.rollbackAttributes();
       }
     }
 });
