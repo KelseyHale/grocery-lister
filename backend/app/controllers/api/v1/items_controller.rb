@@ -17,9 +17,9 @@ class Api::V1::ItemsController < ApplicationController
     if @item.save
       render json: @item,
       status: :created,
-      location: [:api, :v1, item]
+      location: [:api, :v1, @item]
     else
-      render json: { errors: item.errors }, status: :unprocessable_entity
+      render json: { errors: @item.errors }, status: :unprocessable_entity
     end
   end
 
@@ -32,10 +32,10 @@ class Api::V1::ItemsController < ApplicationController
 
     if @item.update(name: item_params[:name])
       render json: @item,
-      status: :updated,
-      location: [:api, :v1, item]
+      status: :ok,
+      location: [:api, :v1, @item]
     else
-      render json: { errors: item.errors }, status: :unprocessable_entity
+      render json: { errors: @item.errors }, status: :unprocessable_entity
     end
   end
 

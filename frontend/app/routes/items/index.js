@@ -9,7 +9,7 @@ export default Ember.Route.extend({
             var item = this.store.createRecord('item', {
                 name: newItem
             });
-            this.controllerFor('items').set('newItem', '');
+            this.controllerFor('items.index').set('newItem', '');
             item.save();
         }
     }
