@@ -12,3 +12,6 @@ rake db:create db:migrate db:seed
 ```
 
 In the `backend` directory run `rails server`. Then, in a separate terminal tab within the `frontend` directory run `ember serve --proxy http://localhost:3000`. Visit `localhost:4200` to view the app locally.
+
+---
+![alt](http://i.imgur.com/ALNxI4B.png)
